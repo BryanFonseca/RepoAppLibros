@@ -1,0 +1,182 @@
+﻿<Page
+    x:Class="Demo.Views.PrestamosPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="using:Demo"
+    Style="{StaticResource PageStyle}"
+    mc:Ignorable="d">
+    <Grid x:ConnectionId='2' x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
+        <Grid
+            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+            <RelativePanel Margin="0,0,0,670">
+                <TextBlock FontSize="30" Margin="30,10,0,0">Libro</TextBlock>
+                <TextBox Margin="30,50,0,0" Width="400" Height="30"></TextBox>
+            </RelativePanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition>
+                    </RowDefinition>
+                    <RowDefinition Height="2*">
+                    </RowDefinition>
+                </Grid.RowDefinitions>
+                <Rectangle Grid.Column="0" Fill="LightGray"></Rectangle>
+                <Rectangle Grid.Column="1" Fill="LightGray"></Rectangle>
+                <StackPanel HorizontalAlignment="Left" Margin="17,12,0,0" Width="575">
+                    <TextBlock FontSize="30">Libros</TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                        <TextBox x:ConnectionId='28' x:Name="TextBoxLibros" HorizontalAlignment="Left" Width="400" Height="30"                      ></TextBox>
+                        <Button x:ConnectionId='29' x:Name="BotonBuscarLibrosPrestamos" Margin="10,0" Height="30" Width="35"                                         >
+                            <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="/SearchIcon.png">
+                                
+                            </Image>
+                        </Button>
+                    </StackPanel>
+
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Margin="17,12,0,0"  Width="575" Grid.Column="1">
+                    <TextBlock FontSize="30">Visitantes</TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                        <TextBox x:ConnectionId='26' x:Name="TextBoxVisitante" HorizontalAlignment="Left" Width="400" Height="30"                         ></TextBox>
+                        <Button x:ConnectionId='27' x:Name="BotonBuscarVisitantesPrestamos" Margin="10,0" Height="30" Width="35"                                             >
+                            <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="/SearchIcon.png">
+
+                            </Image>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+                <ListView x:ConnectionId='14' Name="Libro_Prestamos" HorizontalAlignment="Left" Grid.Row="0" Width="500" Margin="20,95,0,25">
+                    <ListView.HeaderTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="ID" Width="50" Margin="8"></TextBlock>
+                                <TextBlock Text="Nombre" Width="150" Margin="8"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.HeaderTemplate>
+                    <ListView.ItemTemplate>
+                        <DataTemplate                          >
+                            <StackPanel x:ConnectionId='23' Orientation="Horizontal">
+                                <TextBlock x:ConnectionId='24' Name ="IDLibro"                         Width="50" Height="20" Margin="1"/>
+                                <TextBlock x:ConnectionId='25' Name ="Nombre"                        Width="350" Height="20" Margin="5"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <ListView x:ConnectionId='15' Name="Visitante_Prestamos" HorizontalAlignment="Left" Grid.Column="1" Width="500" Margin="20,95,0,25">
+                    <ListView.HeaderTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="ID" Width="50" Margin="8"></TextBlock>
+                                <TextBlock Text="Nombre" Width="150" Margin="8"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.HeaderTemplate>
+                    <ListView.ItemTemplate>
+                        <DataTemplate                              >
+                            <StackPanel x:ConnectionId='18' Orientation="Horizontal">
+                                <TextBlock x:ConnectionId='19' Name ="IDVisitante"                             Width="50" Height="20" Margin="1"/>
+                                <TextBlock x:ConnectionId='20' Name ="Nombre"                        Width="350" Height="20" Margin="5"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="189*"></RowDefinition>
+                    <RowDefinition Height="311*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <ListView x:ConnectionId='5' Name="Prestamos" Grid.Column="0" Grid.Row="1" Margin="38,15,38,15" HorizontalContentAlignment="Stretch">
+                    <ListView.HeaderTemplate>
+                        <DataTemplate>
+                            <Grid HorizontalAlignment="Stretch">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                    <ColumnDefinition Width="550*"></ColumnDefinition>
+                                    <ColumnDefinition Width="300*"></ColumnDefinition>
+                                    <ColumnDefinition Width="200*"></ColumnDefinition>
+                                    <ColumnDefinition Width="200*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Rectangle Fill="CadetBlue"></Rectangle>
+                                <Rectangle Fill="CadetBlue" Grid.Column="1"></Rectangle>
+                                <Rectangle Fill="CadetBlue" Grid.Column="2"></Rectangle>
+                                <Rectangle Fill="CadetBlue" Grid.Column="3"></Rectangle>
+                                <Rectangle Fill="CadetBlue" Grid.Column="4"></Rectangle>
+                                <TextBlock Text="ID" Margin="10,8,10,8"/>
+                                <TextBlock Text="Libro" Margin="18,8,18,8" Grid.Column="1"/>
+                                <TextBlock Text="Visitante" Margin="12,8,12,8" Grid.Column="2"/>
+                                <TextBlock Text="Fecha Prestamo" Margin="8,8,8,8" Grid.Column="3"/>
+                                <TextBlock Text="Fecha Devolución" Margin="2,8,2,8" Grid.Column="4"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.HeaderTemplate>
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.ItemTemplate>
+                        <DataTemplate                             >
+                            <Grid x:ConnectionId='8'>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                    <ColumnDefinition Width="550*"></ColumnDefinition>
+                                    <ColumnDefinition Width="300*"></ColumnDefinition>
+                                    <ColumnDefinition Width="200*"></ColumnDefinition>
+                                    <ColumnDefinition Width="200*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock x:ConnectionId='9' Name ="IDPrestamo"                    HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="0"/>
+                                <TextBlock x:ConnectionId='10' Name ="NombreLibro"                       HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1"/>
+                                <TextBlock x:ConnectionId='11' Name ="Visitante"                           HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="2"/>
+                                <TextBlock x:ConnectionId='12' Name ="FechaPrestamo"                               HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="3"/>
+                                <TextBlock x:ConnectionId='13' Name ="FechaDevolucion"                                 HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="4"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="569*"/>
+                    <ColumnDefinition Width="180*"/>
+                    <ColumnDefinition Width="703*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="251*">
+                    </RowDefinition>
+                    <RowDefinition Height="81*">
+                    </RowDefinition>
+                    <RowDefinition Height="69*">
+                    </RowDefinition>
+                    <RowDefinition Height="599*">
+                    </RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Button x:ConnectionId='3' x:Name="BotonPrestar" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Height="50" Width="102" FontSize="25" Background="Gray"                            VerticalAlignment="Center" Margin="0,0,0,15" BorderBrush="Black">
+                    Prestar
+                </Button>
+                <Button x:ConnectionId='4' x:Name="BotonDevolver" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Height="50" Width="130" FontSize="25" Background="CadetBlue"                             VerticalAlignment="Bottom" >
+                    Devolver
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
+

@@ -1,0 +1,9 @@
+C:\Users\Bratt\source\repos\DemoApp\Demo.Core\bin\Debug\netstandard2.0\Demo.Core.deps.json
+C:\Users\Bratt\source\repos\DemoApp\Demo.Core\bin\Debug\netstandard2.0\Demo.Core.dll
+C:\Users\Bratt\source\repos\DemoApp\Demo.Core\bin\Debug\netstandard2.0\Demo.Core.pdb
+C:\Users\Bratt\source\repos\DemoApp\Demo.Core\obj\Debug\netstandard2.0\Demo.Core.csprojAssemblyReference.cache
+C:\Users\Bratt\source\repos\DemoApp\Demo.Core\obj\Debug\netstandard2.0\Demo.Core.AssemblyInfoInputs.cache
+C:\Users\Bratt\source\repos\DemoApp\Demo.Core\obj\Debug\netstandard2.0\Demo.Core.AssemblyInfo.cs
+C:\Users\Bratt\source\repos\DemoApp\Demo.Core\obj\Debug\netstandard2.0\Demo.Core.csproj.CoreCompileInputs.cache
+C:\Users\Bratt\source\repos\DemoApp\Demo.Core\obj\Debug\netstandard2.0\Demo.Core.dll
+C:\Users\Bratt\source\repos\DemoApp\Demo.Core\obj\Debug\netstandard2.0\Demo.Core.pdb

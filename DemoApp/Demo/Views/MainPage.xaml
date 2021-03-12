@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="Demo.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="using:Demo"
+    Style="{StaticResource PageStyle}"
+    mc:Ignorable="d">
+    <Grid>
+        <StackPanel x:Name="PanelLogin" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGray" CornerRadius="20" Padding="10, 40">
+            <TextBlock Margin="15" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="55">Iniciar sesión</TextBlock>
+            <TextBox Margin="15" x:Name="Usuario" PlaceholderText="usuario" HorizontalAlignment="Center" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Height="50" Width="400" FontSize="28"/>
+            <PasswordBox Margin="15" x:Name="Password" PlaceholderText="contraseña" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="400" FontSize="30" KeyDown="EnterIniciarSesion"/>
+            <Button Margin="15" x:Name="BotonConexion"  HorizontalAlignment="Center" Content="Conectarse" VerticalAlignment="Center" Click="Button_Click" Height="65" Width="236" FontSize="40"/>
+        </StackPanel>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="176*"></RowDefinition>
+                <RowDefinition Height="105*"></RowDefinition>
+                <RowDefinition Height="441*"></RowDefinition>
+                <RowDefinition Height="94*"></RowDefinition>
+                <RowDefinition Height="184*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="1" x:Name="TextoUsuario" Text="usuario" VerticalAlignment="Center"  FontSize="60" Height="80" TextAlignment="Center"/>
+            <Button Background="#344E5C" Foreground="White" CornerRadius="8" Grid.Row="3" HorizontalAlignment="Center" x:Name="CerrarSesionButton" Width="225" FontSize="35" Click="CerrarSesionButton_Click" Margin="0,10" MinHeight="70">Cerrar sesión</Button>
+            <Image Grid.Row="2" x:Name="ImagenAdmin" Source="/AdminIcon.jpg"/>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,1 @@
+C:\Users\Bratt\source\repos\DemoApp\Demo\Demo.csproj;x86
